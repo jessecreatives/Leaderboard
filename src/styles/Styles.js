@@ -8,8 +8,10 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   width: 50px;
+  height: 50px;
   border-radius: 50px;
   margin-right: 20px;
+  border: 3px solid coral;
 `;
 
 export const ProfileContainer = styled.div`
