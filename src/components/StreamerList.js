@@ -1,11 +1,15 @@
 import React, {useState, useEffect, useLayoutEffect} from 'react';
 import {usePrevious, calculateBoundingBoxes} from '../helpers/Helpers';
 
+// The main component with shuffling transition
+// The point is to compare the current stack with the previous one and make transitions accordings
 const StreamerList = ({ children }) => {
+    // current and previous boundingBox states
     const [boundingBox, setBoundingBox] = useState({});
     const [prevBoundingBox, setPrevBoundingBox] = useState({});
     const prevChildren = usePrevious(children);
   
+    // useLayoutEffect to smooth transition
     useLayoutEffect(() => {
       const newBoundingBox = calculateBoundingBoxes(children);
       setBoundingBox(newBoundingBox);
@@ -16,6 +20,7 @@ const StreamerList = ({ children }) => {
       setPrevBoundingBox(prevBoundingBox);
     }, [prevChildren]);
   
+    // transitions
     useEffect(() => {
       const hasPrevBoundingBox = Object.keys(prevBoundingBox).length;
   

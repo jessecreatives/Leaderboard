@@ -7,8 +7,6 @@ import {Container, Button} from './styles/Styles';
 
 const URL = 'https://webcdn.17app.co/campaign/pretest/data.json';
 
-let storedScore = {};
-
 function App() {
   const [streamers, setStreamers] = useState([]);
 
@@ -20,16 +18,10 @@ function App() {
       );
   }, []);
 
-  streamers.map(streamer => storedScore[streamer.userID] = streamer.score);
-
   const shuffle = () => {
     const shuffledStreamers = shuffleArray(streamers);
     setStreamers(shuffledStreamers);
   };
-
-  const saveScore = (id, score) => {
-    storedScore[id] = score;
-  }
 
   return (
     <Container>
