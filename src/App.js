@@ -37,7 +37,7 @@ function App() {
         {streamers.map((streamer, i) => {
           const {userID, displayName, picture, score} = streamer;
           return (
-            <Streamer key={userID} id={i+1} displayName={displayName} picture={picture} score={score} ref={createRef()} />
+            <Streamer key={userID} id={i+1} displayName={displayName} picture={picture} initScore={score} ref={createRef()} />
           );
         })}
       </StreamerList>

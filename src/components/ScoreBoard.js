@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import CountUp from 'react-countup';
 import {getRandomInt} from '../helpers/Helpers';
 
+// This is the scoreboard of each streamer that RERENDERS frequently
 const ScoreBoard = ({initScore}) => {
     const [score, setScore] = useState(initScore);
 
