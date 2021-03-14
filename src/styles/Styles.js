@@ -19,7 +19,15 @@ export const ProfileContainer = styled.div`
 `;
 
 export const ID = styled.span`
-    margin-right: 10px;
+    color: white;
+    background: lightpink;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    margin-right: 15px;
 `;
 
 export const List = styled.ul`
@@ -35,6 +43,9 @@ export const ListItem = styled.li`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  border-radius: 15px;
 `;
 
 export const Box = styled.div`
@@ -68,8 +79,7 @@ export const Score = styled.div.attrs(props => ({
 
 export const Button = styled.button`
     display: block;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 40px auto;
     width: 120px;
     background: coral;
     font-size: 16px;
@@ -77,4 +87,5 @@ export const Button = styled.button`
     padding: 10px;
     border-radius: 10px;
     border: none;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.12);
 `;
